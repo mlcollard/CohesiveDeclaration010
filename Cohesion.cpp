@@ -7,6 +7,12 @@
 #include <vector>
 #include <string>
 
+struct GradeItem {
+    std::vector<std::string> names;
+    std::vector<int> scores;
+    double average;
+};
+
 int main() {
 
     // @cohesion Coincidental
@@ -62,6 +68,13 @@ int main() {
         std::vector<std::string> testNames;
         std::vector<int> tests;
         double testAverage;
+    }
+
+    // @cohesion Informational
+    {
+        GradeItem exercises;
+        GradeItem quizzes;
+        GradeItem tests;
     }
 
     return 0;
